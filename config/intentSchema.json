@@ -1,49 +1,156 @@
 {
-  "intents": [
-    {
-      "intent": "PlayYoutubeVideo",
-      "slots": [
-        {
-          "name": "video",
-          "type": "YOUTUBE_VIDEOS"
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "chromecast",
+            "intents": [
+                {
+                    "name": "PlayYoutubeVideo",
+                    "slots": [
+                        {
+                            "name": "video",
+                            "type": "YOUTUBE_VIDEOS"
+                        }
+                    ],
+                    "samples": [
+                        "PlayYoutubeVideo play the {video}",
+                        "PlayYoutubeVideo play {video} on youtube",
+                        "PlayYoutubeVideo play {video} from youtube",
+                        "PlayYoutubeVideo play {video} "
+                    ]
+                },
+                {
+                    "name": "PlayTrailer",
+                    "slots": [
+                        {
+                            "name": "movie",
+                            "type": "MOVIE"
+                        }
+                    ],
+                    "samples": [
+                        "PlayTrailer play the advert for {movie}",
+                        "PlayTrailer play the trailer for {movie}",
+                        "PlayTrailer play {movie} advert",
+                        "PlayTrailer play {movie} trailer"
+                    ]
+                },
+                {
+                    "name": "PowerOff",
+                    "slots": [],
+                    "samples": [
+                        "PowerOff to switch off",
+                        "PowerOff switch off",
+                        "PowerOff to power off",
+                        "PowerOff power off",
+                        "PowerOff to turn off",
+                        "PowerOff turn off"
+                    ]
+                },
+                {
+                    "name": "SetVolume",
+                    "slots": [
+                        {
+                            "name": "volume",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "SetVolume volume {volume}",
+                        "SetVolume to set volume to {volume}",
+                        "SetVolume set the volume to {volume}",
+                        "SetVolume set volume to {volume}",
+                        "SetVolume to set the volume to {volume}"
+                    ]
+                },
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "AMAZON.HelpIntent Help"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                }
+            ],
+            "types": [
+                {
+                    "name": "YOUTUBE_VIDEOS",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Cheap Thrills by Sia"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "CGP Grey"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Verge"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Saturday Night Live"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "TED"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "EpicMealTime"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Casually Explained"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Iron Man Trailer"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Pewdiepie"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "MKBHD"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "MOVIE",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "The Big Lebowski"
+                            }
+                        }
+                    ]
+                }
+            ]
         }
-      ]
-    },
-    {
-      "intent": "PlayTrailer",
-      "slots": [
-        {
-          "name": "movie",
-          "type": "MOVIE"
-        }
-      ]
-    },
-    {
-      "intent": "PowerOff"
-    },
-    {
-      "intent": "SetVolume",
-      "slots": [
-        {
-          "name": "volume",
-          "type": "AMAZON.NUMBER"
-        }
-      ]
-    },
-    {
-      "intent": "AMAZON.CancelIntent"
-    },
-    {
-      "intent": "AMAZON.PauseIntent"
-    },
-    {
-      "intent": "AMAZON.ResumeIntent"
-    },
-    {
-      "intent": "AMAZON.StopIntent"
-    },
-    {
-      "intent": "AMAZON.HelpIntent"
     }
-  ]
 }
